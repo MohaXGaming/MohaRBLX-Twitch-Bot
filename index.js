@@ -34,12 +34,12 @@ client.on('message', (channel, tags, message, self) => {
 
   // !roblox command
   if (command === '!roblox') {
-    client.say(channel, `@${tags.username}, here's the link to my Roblox profile: https://www.roblox.com/users/YOUR_ROBLOX_PROFILE_ID/profile`);
+    client.say(channel, `@${tags.username}, here's the link to my Roblox profile: https://www.roblox.com/users/7311243796/profile`);
   }
 
   // !socials command (only Twitter and Discord)
   if (command === '!socials') {
-    client.say(channel, `@${tags.username}, follow me on Twitter: https://twitter.com/your_twitter | Join my Discord: https://discord.gg/your_discord_invite`);
+    client.say(channel, `@${tags.username}, follow me on Twitter: https://twitter.com/moharblx | Join my Discord: https://discord.gg/gjf2jbedhs`);
   }
 });
 
@@ -66,3 +66,8 @@ client.on('submysterygift', (channel, username, numbOfSubs, methods, userstate) 
   // A user gifted multiple subs to the community
   client.say(channel, `Wow @${username}, thank you for gifting ${numbOfSubs} subs to the community! 🎉`);
 });
+
+// Timer message every 15 minutes
+setInterval(() => {
+  client.say('MohaRBLX', 'Don\'t forget to follow the channel and join the Discord! https://discord.gg/gjf2jbedhs');
+}, 15 * 60 * 1000); // 15 minutes in milliseconds
